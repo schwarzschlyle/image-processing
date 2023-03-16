@@ -1,3 +1,15 @@
+
+>[!notes] To add (Status: 0/5)
+> 1. Summary of digital image properties (grayscale, color channels, histograms, CDF) and synthesis
+> 2. Summary of color curve manipulation
+> 3. Summary of CDF manipulation
+> 4. Summary of contrast stretching
+> 5. Summary of fade restoration techniques
+
+
+
+
+
 # Digital Image Formation and Enhancement
 
 ## Contrast Stretching
