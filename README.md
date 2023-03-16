@@ -1,5 +1,5 @@
 
->[!notes] To add (Status: 0/5)
+To add (Status: 0/5)
 > 1. Summary of digital image properties (grayscale, color channels, histograms, CDF) and synthesis
 > 2. Summary of color curve manipulation
 > 3. Summary of CDF manipulation
@@ -7,6 +7,7 @@
 > 5. Summary of fade restoration techniques
 
 
+> Delete all experimental ipynb steps
 
 
 
