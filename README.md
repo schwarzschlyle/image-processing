@@ -112,5 +112,6 @@ render_fourier_filter()
 ```
 
 
-![](https://i.imgur.com/Uq4kUfN.gif)
 
+
+![](https://i.imgur.com/mhmoXc3.gif)
