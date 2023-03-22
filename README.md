@@ -1,89 +1,93 @@
+# Key Theme: Mathematical Modelling
+----
+# SOP 
 
-To add (Status: 0/5)
-> 1. Summary of digital image properties (grayscale, color channels, histograms, CDF) and synthesis
-> 2. Summary of color curve manipulation
-> 3. Summary of CDF manipulation
-> 4. Summary of contrast stretching
-> 5. Summary of fade restoration techniques
+[[Stoicism Reflections]]
 
+[[Phenomenological Model Projects]] (Data science)
 
-> Delete all experimental ipynb steps
+[[Mechanistic Model Projects]] (Computational physics, general mathematical modelling, GR)
 
+[[GR Toolkit]]
 
+---
 
-# Digital Image Formation and Enhancement
+# Flow Details
 
-## Contrast Stretching
+1. Learn [[Mathematical Modelling]] guided by mathematical "rigor" of Velten. Apply these principles to
+	1. [[Data Science]]
+	2. [[Computational Physics]]
+2. Do a project and write-up on
+	1. [[Phenomenological Model Projects]] (Usually [[Data Science]])
+	2. [[Mechanistic Model Projects]] (Usually [[Physics]])
+3. Upload on [[GitHub]] and compile as a portfolio: 
+https://schwarzschlyle.github.io/portfolio/ here.
+1. Write a blog post about it.
+2. If sufficient, use [[Manimations]] and try to do a YouTube video (this should come last) by learning how to edit good videos.
+3. Use Kaggle for DS projects; use GR papers for GR projects.
 
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-from PIL import Image
+---
+# Daily Chronology
 
+With these, here are a suggested chronology. The flow is generally split into a three-way highway. 
 
-def contrast_rgb(path, lower, upper): 
-    """
-    User defined function to apply contrast stretching to an image
-    To increase contrast effects, apply percentile rescaling by clipping pixel values
-    For RGB contrasting, we avoid grayscaling the input image
-    Histogram is plotted for each color channel
-    
-    Parameters:
-    
-    path (string): set the path of the input image
-    lower (int): set the lower percentile clipping lower pixel values
-    upper (int): set the higher percentile clipping higher pixel values
-    
-    Author:
-    Lyle Kenneth Geraldez
-    """
-    
-    # Load image
-    image = Image.open(path)
+1) Work on [[Computational Physics]] projects from Landau and supplement with Sadun, Strogatz, Newman
+2) For [[Data Science]], do and compile projects from internship and Kaggle.
+3) Learn [[General Relativity]] via 225 and Caroll supplement. Continue to papers afterwards.
 
-    # Calculate minimum and maximum pixel values
-    min_val, max_val = np.min(image), np.max(image)
+---
 
-    # Define lower and upper percentile values
-    lower_percentile = lower
-    upper_percentile = upper
+# Weekly Chronology
 
-    # Calculate new minimum and maximum pixel values
-    new_min_val = np.percentile(image, lower_percentile)
-    new_max_val = np.percentile(image, upper_percentile)
-
-    # Apply contrast stretching
-    output_image = (image - new_min_val) * (255 / (new_max_val - new_min_val))
-    output_image = np.clip(output_image, 0, 255).astype(np.uint8)
-
-    # Plot histogram before and after contrast stretching
-    fig, axs = plt.subplots(1, 2, figsize=(10, 5))
-    axs[0].hist(np.array(image).ravel(), bins=256, range=(0, 256))
-    axs[0].set_title('Histogram before contrast stretching')
-    axs[0].set_xlabel('Pixel intensity')
-    axs[0].set_ylabel('Frequency')
-    for i in range(3):
-        axs[1].hist(output_image[:,:,i].ravel(), 
-        bins=256, range=(0, 256), alpha=0.5, color=['red', 'green', 'blue'][i])
-    # axs[1].hist(output_image.ravel(), bins=256, range=(0, 256))
-    axs[1].set_title('Histogram after contrast stretching')
-    axs[1].set_xlabel('Pixel intensity')
-    axs[1].set_ylabel('Frequency')
-    # plt.savefig(f'contrast_rgb_hist_{lower}.png', facecolor='black')
-
-    # Display input and output images
-    fig, axs = plt.subplots(1, 2, figsize=(10, 5))
-    axs[0].imshow(image, cmap='gray')
-    axs[0].set_title('Input image')
-    axs[1].imshow(output_image, cmap='gray')
-    axs[1].set_title('Output image')
-    # plt.savefig(f'contrast_rgb_{lower}.png', facecolor='black')
-    plt.show()
-
-for i in range(1, 10, 1):
-    contrast_rgb('dark_galaxy.jpg', i,100-i)
-```
+Push at least (1) new project on portfolio/Github repo.
 
 
+---
+# [[Physics]]
 
-![](https://i.imgur.com/Nxtr3Oc.gif)
+[[Physics]] is simply one kind of [[Mechanistic Models]], a form of [[Mathematical Modelling]]
+
+For [[Theoretical Physics]], we are focusing on [[General Relativity]].  Aim to compile a detailed and organized list of mathematical machineries of [[GR Toolkit]]. Afterwards, dive into [[Numerical Relativity]], read some [[GR Must-Reads]], and derive the calculations of [[Wormholes]].
+
+For [[Computational Physics]], we are aiming to develop multiple projects in-line with learning [[Mathematical Modelling]] > [[Mechanistic Models]].
+
+A complete project consists of the following documentations:
++ Analytical/numerical solution via Python/Mathematica
++ LaTex writeup
++ [[Manimations]]
+
+---
+# [[Data Science]]
+
+Follow typical [[DS Workflow]].
+
+For analytical details, compile them [[Phenomenological Models]]
+
+Compile [[Phenomenological Model Projects]] and push them to https://schwarzschlyle.github.io/portfolio/.
+
+If necessary, you can also do a LaTex writeup or [[Manifold]] if appropriate.
+
+---
+
+
+Mathematical Methods directory needs cleaning up.
+
+You can start converting handwritten notes from [[BS Math Methods Outlines]] learned on BS courses.
+
+
+---
+# [[How to be a human]]?
+
+Core: [[Stoicism Reflections]]
+
+To be an an effective human being, check out guide on [[How to be a human]].
+
+Ongoing note-taking: [[Habit Tier List]], [[Laws of Human Nature]]
+
+Remember the key principles of [[Elements of Effective Thinking]] in building this second brain.
+
+
+---
+
+
+Two months before graduating, apply to multiple remote jobs.
