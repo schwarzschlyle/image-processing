@@ -3,9 +3,6 @@
 To do (Status: 0/6)
 
 
-
-
-
 > 1. Summary of digital image properties (grayscale, color channels, histograms, CDF) and synthesis
 > 2. Summary of color curve manipulation
 > 3. Summary of CDF manipulation
@@ -105,6 +102,12 @@ contrast_rgb(path, lower, upper)
 # Fourier Analysis
 
 
+To do (Status: 0/1)
+
+> 1. Construct Python script for rendering and fix file structure
+
+
+
 ## Fourier Filtering
 
 ```python
@@ -113,6 +116,4 @@ render_fourier_filter()
 
 
 
-
-![](https://i.imgur.com/LZWpKS0.gif)
-
+![](https://i.imgur.com/mcpxypv.gif)
