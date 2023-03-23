@@ -7,7 +7,7 @@
 		3. fourier-correlation
 
 
-> Goal: Develop functioning Python scripts (such as animation rendering) for each image processing concept
+> Goal: Develop functioning Python scripts (such as animation rendering) for each image processing concept, compile all scripts, and wrap them up into a package (mainly, for visualization purposes but who knows.)
 
 
 
