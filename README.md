@@ -12,9 +12,15 @@
 
 1. master
 	1. develop (soon to branch out into 157 subtopics. for now, this only contains fourier projects)
+<<<<<<< HEAD
 		1. fourier-filter
 		2. fourier-convolution
 		3. fourier-correlation
+>>>>>>> develop
+=======
+		1. ~~fourier-filter~~ (finished)
+		2. ~~fourier-convolution~~ (finished)
+		3. fourier-correlation (ongoing)
 >>>>>>> develop
 
 > Goal: Develop functioning Python scripts (such as animation rendering) for each image processing concept, compile all scripts, and wrap them up into a package (mainly, for visualization purposes but who knows.)
