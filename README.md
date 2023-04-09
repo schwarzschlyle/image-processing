@@ -1,11 +1,13 @@
+# FourierViz: A module for visualizing Fourier transform applications
+---
 
-## Active Branches:
 
-1. master
-	1. develop (soon to branch out into 157 subtopics. for now, this only contains fourier projects)
-		1. ~~fourier-filter~~ (finished)
-		2. ~~fourier-convolution~~ (finished)
-		3. fourier-correlation (ongoing)
+
+
+
+
+
+
 
 
 > Goal: Develop functioning Python scripts (such as animation rendering) for each image processing concept, compile all scripts, and wrap them up into a package (mainly, for visualization purposes but who knows.)
@@ -18,13 +20,13 @@ As of the latest commit, the project contains experimental .ipynb notebooks whic
 
 Render GIF animations given an input image (and another accessory images such as PSF or template). Construct documentation as blogpost.
 
-1. Demonstrate contrast stretching 
-2. Demonstrate CDF manipulation 
-3. Demonstrate fade restoration
+1. ~~Demonstrate contrast stretching
+2. ~~Demonstrate CDF manipulation ~~
+3. ~~Demonstrate fade restoration~~
 4. Demonstrate Fourier convolution
 5. Demonstrate Fourier correlation
-6. Demonstrate Fourier filtering
-7. ...
+6. Demonstrate Fourier filtering (naive-filtering)
+7. Demonstrate Fourier filtering (activity 2 part 2 of 157 filtering)
 
 Currently, the codes are in experimental stage via Jupyter notebooks.
 
@@ -74,7 +76,7 @@ To do:
 > 	3. Generate a sweeping GIF
 > 	4. Creates a window with slider to vary size of the sweeping shape
 > 		1. Contains ability to save snapshots
-> 5. Develop into software and create initial documentation
+> 5. Develop into a package and create initial documentation
 
 
 
