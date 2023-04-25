@@ -2,11 +2,12 @@
 ---
 
 
+Current status:
 
+1. Archiving of domain analysis project
+2. Succesfully scripted fourier clipping - ready for packaging.
 
-
-
-
+---
 
 
 
@@ -60,6 +61,8 @@ contrast_rgb(path, lower, upper)
 
 
 # Fourier Domain Analysis
+
+
 
 
 To do:
