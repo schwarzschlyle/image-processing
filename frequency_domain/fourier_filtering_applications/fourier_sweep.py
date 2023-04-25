@@ -5,7 +5,11 @@ from mpl_toolkits.mplot3d import Axes3D
 import os
 import sys
 import imageio
+from PIL import Image
 
+
+import warnings
+warnings.filterwarnings("ignore")
 
 
 def fourier_mask(image_path, inner_radius, outer_radius, sweep_type):
@@ -462,18 +466,15 @@ def fourier_mask(image_path, inner_radius, outer_radius, sweep_type):
 
 
         return img_clipped
-
-
         
         
         
-        
-        
-        
-        
+    
         
 
 def render(directory):
+    
+    print(f"Compiling frames for {directory}...")
 
     # create a list of image file names in the directory
     image_files = os.listdir(directory)
@@ -536,45 +537,50 @@ def sweep(image_path, sweep_type):
     
 
     if sweep_type == "growing_outwards":
-
-        for i in range (0,350,5):
+        print("I will now grow the Fourier information radially outwards")
+        for i in range (0,300,5):
             fourier_mask(image_path,0,i, sweep_type)
+            print(f"Rendering frame {i+5} out of 300")
 
     
 
     if sweep_type == "shrinking_outwards":
-
-        for i in range (0,350,5):
+        print("I will now shrink the Fourier information radially outwards")
+        for i in range (0,300,5):
             fourier_mask(image_path,i,350, sweep_type)
-    
+            print(f"Rendering frame {i+5} out of 300")
     
     
     
     if sweep_type == "growing_inwards":
-    
-        for i in range (0,350,5):
+        print("I will now grow the Fourier information radially inwards")
+        for i in range (0,300,5):
             fourier_mask(image_path,350-i,350, sweep_type)
-    
+            print(f"Rendering frame {i+5} out of 300")
     
     
     if sweep_type == "shrinking_inwards":
-    
-        for i in range (0,350,5):
+        print("I will now shrink the Fourier information radially outwards")
+        for i in range (0,300,5):
             fourier_mask(image_path,0 ,350-i, sweep_type)
-    
+            print(f"Rendering frame {i+5} out of 300")
+            
+            
     
     if sweep_type == "shell_outwards":
-        
-        for i in range (0,350,5):
+        print("I will now sweep the Fourier domain with a thin circular shell radially outwards")
+        for i in range (0,300,5):
             fourier_mask(image_path,0+i ,30 + i, sweep_type)
-    
+            print(f"Rendering frame {i+5} out of 300")
+            
+            
+            
     
     if sweep_type == "shell_inwards":
-    
-        for i in range (0,350,5):
+        print("I will now sweep the Fourier domain with a thin circular shell radially inwards")
+        for i in range (0,300,5):
             fourier_mask(image_path, 350 - i ,380 - i, sweep_type)
-    
-    
+            print(f"Rendering frame {i+5} out of 300")
     
     
     render(subdirectory1)
@@ -582,8 +588,15 @@ def sweep(image_path, sweep_type):
     render(subdirectory3)
     render(subdirectory4)
     render(subdirectory5)
-
-
+    
+    print("Rendering complete!")
+    
+    
+    print("Thank you for using FourierViz. Have a great day!")
+        
+       
+    
+    
 if __name__ == "__main__":
     
     # get the command-line arguments
@@ -591,6 +604,10 @@ if __name__ == "__main__":
     sweep_type = sys.argv[2]
     
     # call the function with the parameters
+    print("Welcome to FourierViz by Schwarzschlyle")
+    print(f"Ohhh, {image_path}, interesting image! Initiating rendering sequence...")
+    print("Please wait while I explore the Fourier information of your image. Thank you!")
+    print("Initiating rendering sequence...")
     sweep(image_path, sweep_type)
-
-
+    
+    
