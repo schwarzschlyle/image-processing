@@ -1,0 +1,6 @@
+To do:
+1. Fix the coordinate finder
+2. Filter Daria
+3. Filter fingerprint
+4. Filter lunar landing
+5. Code the convolution redux 

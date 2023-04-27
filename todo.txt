@@ -1,0 +1,4 @@
+1. Combine Fourier filtration directories
+2. Cleanup file structures
+3. Initialize image segmentation and follow recommended file structure
+4. Finish Fourier filtration tasks
